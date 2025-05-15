@@ -1,0 +1,734 @@
+// .pricing-items {
+//     margin-top: 30px;
+//     border-radius: 18px;
+//     border: 1px solid #DEE4F3;
+//     padding: 55px 40px;
+//     @include transition;
+
+//     .pricing-header {
+//         border-bottom: 1px solid #E9E6E6;
+//         padding-bottom: 50px;
+
+//         @include breakpoint (max-md){
+//             padding-bottom: 30px;
+//         }
+
+//         h2 {
+//             font-size: 52px;
+
+//             sub {
+//                 font-size: 22px;
+//                 font-weight: 500;
+//                 margin-left: -10px;
+
+//                 @include breakpoint (max-md){
+//                     font-size: 20px;
+//                 }
+
+//                 @include breakpoint (max-sm){
+//                     font-size: 18px;
+//                 }
+//             }
+
+//             @include breakpoint (max-md){
+//                 font-size: 40px;
+//             }
+
+//             @include breakpoint (max-sm){
+//                 font-size: 36px;
+//             }
+//         }
+
+//         .offer-text-area {
+//             margin-top: 20px;
+//             display: flex;
+//             justify-content: space-between;
+
+//             h4 {
+//                 font-weight: 500;
+//             }
+
+//             .offer {
+//                 font-size: 15px;
+//                 font-weight: normal;
+//                 text-align: center;
+//                 border-radius: 5px;
+//                 color: $white;
+//                 background-color: $theme-color-2;
+//                 padding: 8px 12px;
+//                 display: inline-block;
+//             }
+//         }
+//     }
+
+//     .pricing-list {
+//         margin-top: 30px;
+
+//         @include breakpoint (max-md){
+//            margin-top: 20px;
+//         }
+
+//         li {
+//             font-size: 18px;
+//             color: #565463;
+
+//             @include breakpoint (max-xl){
+//                 font-size: 15px;
+//             }
+
+//             &:not(:last-child){
+//                 margin-bottom: 20px;
+
+//                 @include breakpoint (max-md){
+//                     margin-bottom: 10px;
+//                 }
+//             }
+
+//             i {
+//                 color: $theme-color-2;
+//             }
+//         }
+//     }
+
+//     .pricing-button {
+//         margin-top: 50px;
+
+//         @include breakpoint (max-md){
+//             margin-top: 30px;
+//         }
+
+//         .theme-btn {
+//             background-color: transparent;
+//             color: $black;
+//             border: 1px solid #F2F2F2;
+//             padding: 20px 40px;
+//             text-transform: uppercase;
+
+//             @include breakpoint (max-xl){
+//                 padding: 22px 40px;
+//                 font-size: 16px;
+//             }
+
+//             @include breakpoint (max-lg){
+//                 padding: 20px 25px;
+//                 font-size: 14px;
+//             }
+
+//             i {
+//                 @include transition;
+//                 color: $black;
+//             }
+
+//             &:hover {
+//                 &::before,&::after {
+//                     background-color: $theme-color-2;
+//                 }
+
+//                 color: $white;
+
+//                 i {
+//                     color: $white
+//                 }
+//             }
+//         }
+//     }
+
+//     &:hover {
+//         transform: translateY(-10px);
+//     }
+
+//     &.active {
+//         background-color: $theme-color-2;
+
+//         .pricing-header {
+//             border-bottom: 1px solid #ffffff1a;
+    
+//             h2 {
+//                 color: $white;
+    
+//                 sub {
+//                     color: $white;
+//                 }
+//             }
+    
+//             .offer-text-area {
+
+//                 h4 {
+//                     color: $white;
+//                 }
+    
+//                 .offer {
+//                     color: $white;
+//                     background: rgba(255, 255, 255, 0.15);
+//                 }
+//             }
+//         }
+
+//         .pricing-list {
+//             li {
+//                color: $white;
+    
+//                 i {
+//                     color: $white;
+//                 }
+//             }
+//         }
+
+//         .pricing-button {
+//             margin-top: 50px;
+    
+//             .theme-btn {
+//                 background-color: $white;
+//                 color: $black;
+//                 border: 1px solid transparent;
+    
+//                 i {
+//                     color: $black;
+//                 }
+    
+//                 &:hover {
+//                     &::before,&::after {
+//                         background-color: $black;
+//                     }
+
+//                     border: 1px solid $black;
+//                     color: $white;
+    
+//                     i {
+//                         color: $white
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+.pricing-section {
+    background-color: $header-color;
+}
+
+.pricing-card-items {
+    margin-top: 30px;
+    background-color: $white;
+    border-radius: 8px;
+    padding: 50px 30px;
+    position: relative;
+    z-index: 9;
+    text-align: center;
+    overflow: hidden;
+
+    &::before {
+        @include before;
+        background-color: #f4f2e9;
+        z-index: -1;
+        border-radius: 8px 8px 0 0;
+        height: 31%;
+    }
+
+    .tag {
+        position: absolute;
+        right: 0;
+        top: 12px;
+        z-index: 9;
+        transform: rotate(45deg);
+        font-weight: 900;
+        font-size: 14px;
+        color: $white;
+       
+        &::before {
+            position: absolute;
+            top: -11px;
+            right: -15px;
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 100px 90px 0;
+            border-color: transparent $theme-color transparent;
+            z-index: 0;
+            transform: rotate(-42deg);
+            z-index: -1;
+        }
+    }
+
+    .pricing-header {
+        text-align: center;
+
+        h6 {
+            color: $theme-color;
+        }
+    }
+
+    .icon-items {
+        @include flex;
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        gap: 20px;
+
+        li {
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: $white;
+            box-shadow: 0 0 18px rgba(0, 0, 0, .08);
+            
+            i {
+                font-size: 35px;
+                line-height: 85px;
+                color: $header-color;
+            }
+        }
+    }
+
+    .price-list {
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+        display: inline-block;
+        text-align: left;
+
+        li {
+            &:not(:last-child){
+                margin-bottom: 10px;
+            }
+
+            i {
+                color: $theme-color;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .price {
+        font-size: 18px;
+        line-height: 1em;
+        margin: 25px 0 30px;
+        font-weight: 600;
+        color: $theme-color;
+        vertical-align: middle;
+
+        span {
+            color: $header-color;
+        }
+    }
+}
+
+.pricing-section-2 {
+    background-color: #f5f5f8;
+}
+
+.pricing-wrapper {
+    background-color: $white;
+    padding: 60px;
+    padding-right: 35px;
+
+    .pricing-content-box {
+        @include breakpoint (max-md){
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            gap: 30px;
+        }
+
+        .price-content {
+            p {
+                color: $text-color;
+                margin-bottom: 5px;
+            }
+
+            h3 {
+                font-size: 28px;
+                margin-bottom: 10px;
+            }
+
+            span {
+                em {
+                    color: $theme-color;
+                }
+            }
+        }
+
+        .price-icon {
+            @include flex;
+            gap: 25px;
+            border: 1px solid #E9EDF3;
+            border-radius: 50px;
+            padding: 20px;
+            .icon {
+                height: 60px;
+                width: 60px;
+                line-height: 70px;
+                text-align: center;
+                background-color: $white;
+                box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.06); 
+                border-radius: 50%;
+                font-size: 36px;
+                color: $theme-color;
+            }
+        }
+    }
+
+    .pricing-list-items {
+        @include breakpoint (max-xl){
+            justify-content: space-between;
+        }
+
+        @include breakpoint (max-md){
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .price-list {
+            flex: 0 0 auto;
+            margin-right: 45px;
+
+            @include breakpoint (max-xxl){
+                margin-right: 0;
+            }
+            
+            li {
+                &:not(:last-child){
+                    margin-bottom: 5px;
+                }
+
+                i {
+                    color: $theme-color;
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        .price-button {
+            text-align: center;
+
+            h3 {
+                margin-bottom: 10px;
+                font-size: 48px;
+
+                i {
+                    margin-left: -10px;
+                    font-size: 16px;
+                }
+
+                span {
+                    font-size: 14px;
+                    color: $text-color;
+                    font-weight: 400;
+                }
+            }
+
+            .theme-btn {
+                background-color: transparent;
+                border: 1px solid rgba(50, 57, 74, 0.15);
+                border-radius: 0;
+
+                span {
+                    color: $header-color;
+                    @include transition;
+                }
+
+                &::before,&::after {
+                    background-color: $theme-color;
+                    border-radius: 0;
+                }
+
+                &:hover {
+                   span {
+                    color: $white;
+                   }
+                }
+            }
+        }
+    }
+
+    &.active {
+        background-color: $theme-color;
+
+        .pricing-content-box {
+            .price-content {
+                p {
+                    color: $white;
+                }
+    
+                h3 {
+                    color: $white;
+                }
+    
+                span {
+                    color: $white;
+
+                    em {
+                        color: $white;
+                    }
+                }
+            }
+    
+            .price-icon {
+                border: 1px solid $white;
+            }
+        }
+    
+        .pricing-list-items {
+            .price-list {
+                li {
+                   color: $white;
+    
+                    i {
+                       color: $white;
+                    }
+                }
+            }
+    
+            .price-button {
+                text-align: center;
+    
+                h3 {
+                   color: $white;
+    
+                    i {
+                      color: $white;
+                    }
+    
+                    span {
+                        color: $white;
+                    }
+                }
+    
+                .theme-btn {
+                    border: 1px solid $white;
+    
+                    span {
+                       color: $white;
+                    }
+    
+                    &::before,&::after {
+                        background-color: $header-color;
+                    }
+    
+                    &:hover {
+                        border: 1px solid transparent;
+
+                       span {
+                        color: $white;
+                       }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pricing-card-items-2 {
+    //margin-top: 30px;
+    padding: 40px 50px;
+    text-align: center;
+    position: relative;
+    z-index: 9;
+
+    &::before {
+        @include before;
+        background-color: $white;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        height: initial;
+        z-index: -1;
+        top: 68px;
+    }
+
+    .pricing-icon {
+        @include flex;
+        gap: 20px;
+        justify-content: center;
+        margin-bottom: 30px;
+
+        .icon {
+            height: 60px;
+            width: 60px;
+            line-height: 70px;
+            text-align: center;
+            background-color: $theme-color-2;
+            border-radius: 50%;
+            font-size: 36px;
+            color: $white;
+            box-shadow: 0px 2px 15px #c6c6c6;
+        }
+    }
+
+    .pricing-header {
+        text-align: center;
+
+        h2 {
+            font-size: 52px;
+            margin-top: 20px;
+
+            sub {
+                font-size: 24px;
+                color: $header-color;
+                font-weight: 600;
+                margin-top: -15px;
+                display: inline-block;
+            }
+
+            span {
+                font-size: 16px;
+                color: $text-color;
+                font-weight: 400;
+                margin-left: -15px;
+            }
+        }
+    }
+
+    .pricing-list {
+        margin-top: 30px;
+        text-align: left;
+        margin-bottom: 40px;
+
+        li {
+            color: $header-color;
+
+            i {
+                color: $theme-color;
+                margin-right: 5px;
+            }
+
+            &:not(:last-child){
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    .theme-btn {
+        padding: 20px 40px;
+    }
+
+    &.active {
+        &::before {
+            background-color: $theme-color-2;
+        }
+    
+        .pricing-icon {
+    
+            .icon {
+                background-color: $white;
+                color: $header-color;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            }
+        }
+    
+        .pricing-header {
+    
+            h2 {
+               color: $white;
+    
+                sub {
+                    color: $white;
+                }
+    
+                span {
+                    color: $white;
+                }
+            }
+
+            p,h5 {
+                color: $white;
+            }
+        }
+    
+        .pricing-list {
+    
+            li {
+                color: $white;
+    
+                i {
+                    color: $white;
+                }
+            }
+        }
+
+        .theme-btn {
+            background-color: $white;
+            color: $header-color;
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+}
+
+.pricing-box-items {
+    margin-top: 30px;
+    background-color: rgb(22, 22, 22);
+
+    .pricing-header {
+        background-color: $theme-color;
+        padding: 30px 40px;
+        position: relative;
+
+        h3 {
+            color: $white;
+            font-size: 28px;
+        }
+
+        h4 {
+            color: $white;
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 5px;
+        }
+
+        .icon {
+            font-size: 50px;
+            color: $white;
+            position: absolute;
+            top: 30px;
+            right: 40px;
+        }
+    }
+
+    .pricing-list {
+        padding: 30px 40px;
+
+        li {
+            display: flex;
+            gap: 20px;
+            
+            &:not(:last-child){
+                margin-bottom: 15px;
+            }
+            
+            .price {
+                color: $white;
+                font-size: 14px;
+                line-height: 1.7;
+            }
+
+            i {
+                color: $theme-color;
+                font-size: 18px;
+                margin-top: 5px;
+            }
+        }
+    }
+
+    .price-button {
+        padding: 0 40px 30px;
+
+        .theme-btn {
+            &::before,&::after {
+                background-color: $white;
+            }
+
+            span {
+                @include transition;
+            }
+
+            &:hover {
+                span {
+                    color: $header-color;
+                }
+            }
+        }
+    }
+}

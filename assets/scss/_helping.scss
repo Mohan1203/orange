@@ -1,0 +1,301 @@
+
+//page scroll bar add
+::-webkit-scrollbar {
+	width: 4px;
+	height: 4px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px $theme-color; 
+	border-radius: 5px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: $theme-color;
+	border-radius: 10px;
+}
+//page scroll bar add
+
+//Basic Code Start
+.fix {
+  overflow: hidden;
+}
+
+.ralt{
+ position: relative;
+}
+
+.ml-100{
+  margin-left: 100px;
+}
+//Basic Code End
+
+//Video Css Start
+.ripple {
+  position: relative;
+
+  &::before,&::after {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 60px;
+      height: 60px;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+      border-radius: 50%;
+      box-shadow: 0 0 0 0 rgba(214, 17, 30, .5);
+      -webkit-animation: rippleOne 3s infinite;
+      animation: rippleOne 3s infinite;
+  }
+
+  &::before {
+      -webkit-animation-delay: 0.9s;
+      animation-delay: 0.9s;
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+  }
+
+  &::after {
+      -webkit-animation-delay: 0.6s;
+      animation-delay: 0.6s;
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+  }
+}
+//Video Css End
+
+
+//pagination default
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+br {
+  @include breakpoint(max-lg){
+    display: none;
+  }
+}
+
+
+/* background */
+.bg-cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+}
+
+//>>>>> Nice Select Css Start <<<<<//
+.nice-select {
+    color: $text-color;
+    background-color: transparent;
+    font-size: 16px;
+    width: unset;
+    outline: none;
+    padding: 18px 30px;
+    border: none;
+    border: 1px solid #E4E4E4;
+    font-weight: 500;
+    color: $text-color;
+
+    @include breakpoint (max-sm){
+      padding: 12px 20px;
+   }
+   
+   @include transition;
+
+   span {
+        color: $text-color;
+        font-size: 16px;
+        margin-bottom: 0 !important;
+        font-weight: 500;
+    }
+
+    &:hover {
+
+      &::after {
+        border-bottom: 1px solid $text-color;
+        border-right: 1px solid $text-color;
+      }
+  }
+}
+
+.nice-select option {
+  color: $text-color;
+}
+
+.nice-select .current {
+  margin-right: 12px;
+}
+
+.nice-select:after {
+  right: 23px;
+  border-bottom: 1px solid $text-color;
+  border-right: 1px solid $text-color;
+  width: 10px;
+  height: 10px;
+}
+
+.nice-select.open .list {
+  background: $bg-color;
+  margin-top: 16px;
+  width: 100%;
+  text-transform: capitalize;
+  color: $text-color;
+}
+
+.nice-select .option.selected.focus {
+  background: $bg-color;
+  outline: none;
+  color: $theme-color;
+  text-transform: capitalize;
+  font-size: 16px;
+}
+
+.nice-select .option {
+  border: none;
+}
+
+.nice-select .option:hover {
+background: transparent;
+}
+//>>>>> Nice Select Css End <<<<<//
+
+
+.head-color {
+  color: $header-color;
+}
+
+.theme-color-1 {
+  color: $theme-color !important;
+}
+
+.border-none {
+  border-top: none !important;
+}
+
+.array-button {
+  position: relative;
+  z-index: 99;
+
+  .array-prev {
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      border-radius: 50%;
+      background-color: $white;
+      color: $theme-color-2;
+      font-size: 18px;
+      font-weight: 600;
+      @include transition;
+
+      @include breakpoint (max-sm){
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+      }
+
+      &:hover {
+        background-color: $theme-color;
+        color: $white;
+      }
+  }
+  .array-next {
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      border-radius: 50%;
+      background-color: $theme-color;
+      color: $white;
+      font-size: 18px;
+      font-weight: 600;
+      @include transition;
+
+      @include breakpoint (max-sm){
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+      }
+
+      &:hover {
+        background-color: $white;
+        color: $theme-color;
+      }
+  }
+
+  &.style-2 {
+      @include flex;
+      gap: 10px;
+
+    .array-prev, .array-next {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background-color: #181818;
+        border-radius: 0;
+        color: $white;
+        font-size: 14px;
+        color: #5E5E5E;
+
+        &:hover {
+            background-color: $theme-color;
+            color: $white;
+        }
+    }
+
+    .array-next {
+        background: $theme-color;
+        color: $white;
+    }
+  }
+}
+
+.custom-container-2 {
+	max-width: 1590px;
+}
+
+.movie-bg {
+  margin-top: -250px;
+  padding-top: 250px;
+  padding-bottom: 115px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.mg-top-20 {
+  margin-top: -20px;
+}
+
+.mg-top-8 {
+  margin-top: -8px;
+}
+
+.swiper-dot {
+  text-align: center;
+  // margin-top: 40px;
+  // margin-bottom: -7px;
+
+  .swiper-pagination-bullet {
+      width: 30px;
+      height: 8px;
+      transition: 0.6s;
+      background-color: $white;
+      opacity: 1;
+      border-radius: 60px;
+      position: relative;
+  }
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+      background-color: $theme-color;
+      transition: 0.6s;
+      position: relative;
+      width: 51px;
+  }
+
+}
