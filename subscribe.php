@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Set the recipient email address.
     // FIXME: Update this to your desired email address to receive subscription notifications.
-    $recipient = "wrteam.sumit@gmail.com"; // Example: your admin email
+    $recipient = "mohan.shreesoftech@gmail.com"; // Example: your admin email
 
     // Set the email subject.
     $subject = "New Newsletter Subscription";

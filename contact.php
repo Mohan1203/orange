@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Set the recipient email address.
     // FIXME: Update this to your desired email address.
-    $recipient = "hiteshmepani@gmail.com";
+    $recipient = "mohan.shreesoftech@gmail.com";
 
     // Define the email subject
     $subject = "New Contact Form Submission from $name";
