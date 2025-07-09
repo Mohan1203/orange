@@ -1,0 +1,11 @@
+{
+    "name": "wrteam/orange-tech",
+    "autoload": {
+        "psr-4": {
+            "Wrteam\\OrangeTech\\": "src/"
+        }
+    },
+    "require": {
+        "phpmailer/phpmailer": "^6.10"
+    }
+}
