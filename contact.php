@@ -23,17 +23,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Server settings
         $mail->isSMTP();
-        $mail->Host = 'smtp.hostinger.com';           // Replace with your SMTP host
+        $mail->Host = ADD_YOUR_YOUR_SMTP;           // Replace with your SMTP host
         $mail->SMTPAuth = true;
-        $mail->Username = 'hitesh@orangeinfotech.co.in'; // Replace with your SMTP username
-        $mail->Password = 'Hiteshmepani@123';    // Use App Password for Gmail (not your normal password)
+        $mail->Username = ''; // Replace with your SMTP username
+        $mail->Password = '';    // Use App Password for Gmail (not your normal password)
         $mail->SMTPSecure = 'ssl';
         $mail->Port = 465;
 
         // Recipients
-        $mail->setFrom('hitesh@orangeinfotech.co.in', $name);
+        $mail->setFrom('', $name);
         $mail->addReplyTo($email, $name);
-        $mail->addAddress('hitesh@orangeinfotech.co.in');
+        $mail->addAddress('');
 
         // Content
         $mail->Subject = $subject;
